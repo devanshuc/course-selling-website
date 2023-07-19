@@ -1,6 +1,9 @@
 import { Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div
 			style={{
@@ -17,9 +20,21 @@ const Navbar = () => {
 			</div>
 			<div style={{ display: "flex" }}>
 				<div style={{ marginRight: 10 }}>
-					<Button variant="contained">SignUp</Button>
+					<Button
+						variant="contained"
+						onClick={() => {
+							navigate("/signup");
+						}}
+					>
+						SignUp
+					</Button>
 				</div>
-				<div style={{ marginRight: 10 }}>
+				<div
+					style={{ marginRight: 10 }}
+					onClick={() => {
+						navigate("/login");
+					}}
+				>
 					<Button variant="contained">Login</Button>
 				</div>
 			</div>

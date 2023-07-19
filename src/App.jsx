@@ -1,5 +1,7 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Signup from "./components/Signup";
+import Login from "./components/Login";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -14,8 +16,13 @@ function App() {
 				backgroundColor: "#eeeeee",
 			}}
 		>
-			<Navbar />
-			<Signup />
+			<Router>
+				<Navbar />
+				<Routes>
+					<Route path="/signup" element={<Signup />}></Route>
+					<Route path="/login" element={<Login />}></Route>
+				</Routes>
+			</Router>
 		</div>
 	);
 }
