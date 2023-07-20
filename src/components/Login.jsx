@@ -1,43 +1,47 @@
-import { TextField, Card, Typography, Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { Card, Typography } from "@mui/material";
 
-const Login = () => {
+function Login() {
 	return (
 		<div>
 			<div
 				style={{
-					paddingTop: 120,
+					paddingTop: 150,
 					marginBottom: 10,
 					display: "flex",
 					justifyContent: "center",
 				}}
 			>
-				<Typography variant={"h6"}>Welcome to Udemy. Sign up below</Typography>
+				<Typography variant={"h6"}>Welcome back. Sign in below</Typography>
 			</div>
 			<div style={{ display: "flex", justifyContent: "center" }}>
-				<Card variant="outlined" style={{ width: 400, padding: 20 }}>
-					<Typography paragraph>
-						<TextField
-							id="outlined-basic"
-							label="Email Address"
-							variant="outlined"
-							fullWidth={true}
-						/>
-					</Typography>
-					<Typography paragraph>
-						<TextField
-							id="outlined-basic"
-							label="Password"
-							variant="outlined"
-							fullWidth={true}
-						/>
-					</Typography>
-					<Button size="large" variant="contained" fullWidth>
+				<Card varint={"outlined"} style={{ width: 400, padding: 20 }}>
+					<TextField
+						fullWidth={true}
+						id="email"
+						label="Email"
+						variant="outlined"
+					/>
+					<br />
+					<br />
+					<TextField
+						fullWidth={true}
+						id="password"
+						label="Password"
+						variant="outlined"
+						type={"password"}
+					/>
+					<br />
+					<br />
+
+					<Button size={"large"} variant="contained">
 						Login
 					</Button>
 				</Card>
 			</div>
 		</div>
 	);
-};
+}
 
 export default Login;
