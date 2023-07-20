@@ -15,7 +15,7 @@ const Navbar = () => {
 				height: "4rem",
 			}}
 		>
-			<div style={{ marginLeft: 10 }}>
+			<div style={{ marginLeft: 20 }}>
 				<Typography variant={"h5"}>Udemy</Typography>
 			</div>
 			<div style={{ display: "flex" }}>
@@ -30,7 +30,7 @@ const Navbar = () => {
 					</Button>
 				</div>
 				<div
-					style={{ marginRight: 10 }}
+					style={{ marginRight: 20 }}
 					onClick={() => {
 						navigate("/login");
 					}}

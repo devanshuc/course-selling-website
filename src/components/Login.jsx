@@ -5,7 +5,7 @@ const Login = () => {
 		<div>
 			<div
 				style={{
-					paddingTop: 150,
+					paddingTop: 120,
 					marginBottom: 10,
 					display: "flex",
 					justifyContent: "center",
